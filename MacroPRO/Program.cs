@@ -16,7 +16,7 @@ namespace MacroPRO
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new CPSForm());
+            Application.Run(new MenuForm());
         }
     }
 }
