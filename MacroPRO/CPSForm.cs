@@ -13,12 +13,14 @@ using System.Windows.Forms;
 
 namespace MacroPRO
 {
-    public partial class Form1 : Form
+    public partial class CPSForm : Form
     {
-        public Form1()
+        public CPSForm()
         {
             InitializeComponent();
-            Process[] ps = Process.GetProcessesByName("Minecraft.Windows");
+            this.BackColor = Color.Lime;
+            this.TransparencyKey = Color.Lime;
+            Process[] ps = Process.GetProcessesByName("Discord");
             label1.Text = ps.Length.ToString();
             Process minecraftProcess = ps.FirstOrDefault();
         }
@@ -40,7 +42,7 @@ namespace MacroPRO
         {
             mouse_event(MOUSEEVENTF_ABSOLUTE | MOUSEEVENTF_MOVE, x, y, 0, 0);
         }
-        public static void LeftClick()
+        public void LeftClick()
         {
             mouse_event(MOUSEEVENTF_LEFTDOWN, Control.MousePosition.X, Control.MousePosition.Y, 0, 0);
             mouse_event(MOUSEEVENTF_LEFTUP, Control.MousePosition.X, Control.MousePosition.Y, 0, 0);
@@ -77,16 +79,43 @@ namespace MacroPRO
             label1.Text = (Convert.ToInt32(label1.Text) + 1).ToString();
             LeftClick();
         }
+        bool a;
+        int cpsSayar = 0;
         private void timer1_Tick(object sender, EventArgs e)
         {
-            if (Control.MouseButtons == MouseButtons.XButton2)
+            if (a != (Control.MouseButtons == MouseButtons.Left) && Control.MouseButtons == MouseButtons.Left)
             {
-                for (int i = 0; i < 10; i++)
+                //macro();
+                a = (Control.MouseButtons == MouseButtons.Left);
+                cpsSayar++;
+                silici();
+            }
+            else
+            {
+                a = (Control.MouseButtons == MouseButtons.Left);
+
+            }
+            label1.Text = cpsSayar.ToString();
+
+        }
+        async Task silici()
+        {
+            await Task.Run(() =>
+            {
+                Thread.Sleep(1000);
+                cpsSayar--;
+            });
+        }
+
+        async Task macro()
+        {
+            await Task.Run(() =>
+            {
+                for (int i = 0; i < 3; i++)
                 {
-                    Thread.Sleep(80);
                     LeftClick();
                 }
-            }
+            });
         }
     }
 }
