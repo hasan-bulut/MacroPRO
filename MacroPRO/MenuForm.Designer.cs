@@ -33,8 +33,8 @@
             this.MainCloseButton = new System.Windows.Forms.PictureBox();
             this.SettingsButton = new System.Windows.Forms.PictureBox();
             this.SettingsPanel = new System.Windows.Forms.Panel();
-            this.SettingTitle = new System.Windows.Forms.Label();
             this.Settings_CloseButton = new System.Windows.Forms.PictureBox();
+            this.SettingTitle = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.MainCloseButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SettingsButton)).BeginInit();
             this.SettingsPanel.SuspendLayout();
@@ -91,18 +91,6 @@
             this.SettingsPanel.TabIndex = 3;
             this.SettingsPanel.Visible = false;
             // 
-            // SettingTitle
-            // 
-            this.SettingTitle.BackColor = System.Drawing.Color.IndianRed;
-            this.SettingTitle.Font = new System.Drawing.Font("Play", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.SettingTitle.ForeColor = System.Drawing.Color.Gold;
-            this.SettingTitle.Location = new System.Drawing.Point(0, 0);
-            this.SettingTitle.Name = "SettingTitle";
-            this.SettingTitle.Size = new System.Drawing.Size(400, 40);
-            this.SettingTitle.TabIndex = 0;
-            this.SettingTitle.Text = "Ayarlar";
-            this.SettingTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // Settings_CloseButton
             // 
             this.Settings_CloseButton.BackColor = System.Drawing.Color.IndianRed;
@@ -114,6 +102,18 @@
             this.Settings_CloseButton.TabIndex = 2;
             this.Settings_CloseButton.TabStop = false;
             this.Settings_CloseButton.Click += new System.EventHandler(this.Settings_CloseButton_Click);
+            // 
+            // SettingTitle
+            // 
+            this.SettingTitle.BackColor = System.Drawing.Color.IndianRed;
+            this.SettingTitle.Font = new System.Drawing.Font("Play", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.SettingTitle.ForeColor = System.Drawing.Color.Gold;
+            this.SettingTitle.Location = new System.Drawing.Point(0, 0);
+            this.SettingTitle.Name = "SettingTitle";
+            this.SettingTitle.Size = new System.Drawing.Size(400, 40);
+            this.SettingTitle.TabIndex = 0;
+            this.SettingTitle.Text = "Ayarlar";
+            this.SettingTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // MenuForm
             // 
